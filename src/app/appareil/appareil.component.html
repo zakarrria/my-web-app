@@ -1,0 +1,10 @@
+<li class="list-group-item">
+<h4>appareil:{{appareilname}}-----statut:{{ getstatus() }}</h4>
+<div style="width: 20px ; height:20px ; background-color: red;" *ngIf="appareilstatus==='éteint'"
+></div>
+<div style="width: 20px ; height:20px ; background-color: green;" *ngIf="appareilstatus==='allumé'"
+></div>
+<button class="btn btn-success" (onclick)="onswitchon()">allumer</button>
+<button class="btn btn-success" (onclick)="onswitchoff()">éteindre</button>
+</li>
+ 

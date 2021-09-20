@@ -1,0 +1,16 @@
+<div background-color='red' height=30px>Mes appareils</div>      
+      <h2>mise a jour {{lastupdate}}</h2>
+      <ul class="list-group"> 
+      <app-appareil *ngFor="let appareil of appareils; let i = index"
+      [indexofappareil]="i"
+      [appareilname]="appareil.name"
+      [appareilstatus]="appareil.status"
+      ></app-appareil>
+      </ul>
+    <button style="width: 200px ; height:30px " class="btn btn-danger"
+    (click)="switchoff()">éteindre</button>
+    <br>
+    
+    <button style="width: 100px ; height:30px" class="btn btn-success"
+    (click)="switchon()">allumer</button>
+  
